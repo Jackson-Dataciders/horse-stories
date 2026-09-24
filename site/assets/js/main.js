@@ -1,6 +1,6 @@
 /*
  * Horse Stories by the Forners – progressive enhancement.
- * Navigation (burger menu), carousels, scroll reveal and footer year.
+ * Navigation (burger menu), carousels and scroll reveal.
  * The page is fully usable without this file.
  */
 (function () {
@@ -218,19 +218,10 @@
     Array.prototype.forEach.call(items, function (item) { observer.observe(item); });
   }
 
-  /* ---------- Footer year ---------- */
-  function initYear() {
-    var year = String(new Date().getFullYear());
-    Array.prototype.forEach.call(document.querySelectorAll('[data-year]'), function (el) {
-      el.textContent = year;
-    });
-  }
-
   function init() {
     initNavigation();
     initCarousels();
     initReveal();
-    initYear();
   }
 
   if (document.readyState === 'loading') {
